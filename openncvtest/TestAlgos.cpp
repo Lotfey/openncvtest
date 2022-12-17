@@ -24,7 +24,6 @@ int main()
 	// gaussian filter
 	cv::GaussianBlur(grayImage, bluredImage, cv::Size(3, 3), 5.0, 0.0);
 
-
 	// canny filter, edge detection
 	cv::Canny(grayImage, edgeImage, 35, 80);
 
@@ -44,18 +43,7 @@ int main()
 	//Equivalent syntax
 	cv::Rect cropMe(100, 80, 400, 400);
 	cropedImage = RGBImage(cropMe2);
-
-
-	// canny filter, edge detection
-	cv::Canny(grayImage, edgeImage, 35, 80);
-
-	// dilate edges
-	cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
-	cv::Mat kernel2 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(2, 2));
-	cv::dilate(edgeImage, dilatedImage, kernel);
-
-	// erode
-	cv::erode(edgeImage, erodedImage, kernel2);
+	
 	//Display
 	cv::imshow("original image", RGBImage);
 	cv::imshow("Gray image conversion", grayImage);
@@ -63,7 +51,6 @@ int main()
 	cv::imshow("edge detection", edgeImage);
 	cv::imshow("Dilated Image", dilatedImage);
 	cv::imshow("Eroded Image", erodedImage);
-
 	cv::imshow("Resized Image", resizedImage);
 	cv::imshow("croped Image", cropedImage);
 
