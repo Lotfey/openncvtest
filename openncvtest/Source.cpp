@@ -21,9 +21,20 @@ int main()
 
 	cv::waitKey(0);
 
-	
+	// check the webCam
+	cv::VideoCapture capture(0);
+	cv::Mat images;
+
+	while (1)
+	{
+		//capture image from the webCam
+		capture.read(images);
+		//display
+		cv::imshow("WebCam", images);
+		cv::waitKey(1);
+
+	}
 
 
-	std::cout << "nothing" << std::endl;
 	return 0;
 }
