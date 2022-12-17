@@ -13,7 +13,7 @@ int main()
 	const std::string imageName = "lena_color_512.tif";
 
 	//read rgb image to test rgb to gray and bluring algorithms
-	cv::Mat RGBImage=cv::imread(PATH_TO_IMAGES + imageName);
+	cv::Mat RGBImage = cv::imread(PATH_TO_IMAGES + imageName);
 
 	// outputs
 	cv::Mat grayImage, bluredImage, edgeImage, dilatedImage, erodedImage, resizedImage, cropedImage;
@@ -32,7 +32,7 @@ int main()
 	cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
 	cv::Mat kernel2 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(2, 2));
 	cv::dilate(edgeImage, dilatedImage, kernel);
-	
+
 	// erode
 	cv::erode(edgeImage, erodedImage, kernel2);
 
@@ -40,9 +40,9 @@ int main()
 	cv::resize(RGBImage, resizedImage, cv::Size(), 0.5, 0.5);
 
 	//Cropped image
-	cv::Rect cropMe2(cv::Point(100,80), cv::Point(400,400));
+	cv::Rect cropMe2(cv::Point(100, 80), cv::Point(400, 400));
 	//Equivalent syntax
-	cv::Rect cropMe(100, 80,400, 400);
+	cv::Rect cropMe(100, 80, 400, 400);
 	cropedImage = RGBImage(cropMe2);
 
 
@@ -53,7 +53,7 @@ int main()
 	cv::Mat kernel = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(5, 5));
 	cv::Mat kernel2 = cv::getStructuringElement(cv::MORPH_RECT, cv::Size(2, 2));
 	cv::dilate(edgeImage, dilatedImage, kernel);
-	
+
 	// erode
 	cv::erode(edgeImage, erodedImage, kernel2);
 	//Display
