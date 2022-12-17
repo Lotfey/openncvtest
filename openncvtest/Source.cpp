@@ -33,6 +33,7 @@ int main()
 		cv::imshow("WebCam", images);
 		cv::waitKey(1);
 
+		//Okay webcam works fine...
 	}
 
 
