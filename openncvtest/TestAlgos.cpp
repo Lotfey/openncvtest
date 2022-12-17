@@ -11,7 +11,7 @@ int main()
 {
 	// Set input data info
 	const std::string  PATH_TO_IMAGES = "standard_test_images/";
-	std::string imageName = "lena_color_512.tif";
+	const std::string imageName = "lena_color_512.tif";
 	
 	//read rgb image to test rgb to gray and bluring algorithms
 	cv::Mat RGBImage=cv::imread(PATH_TO_IMAGES + imageName);
@@ -31,7 +31,7 @@ int main()
 	cv::imshow("blured image", bluredImage);
 
 	cv::waitKey(0);
-
-
 	return 0;
+
+	//Looks fine so far...
 }
