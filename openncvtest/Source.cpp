@@ -18,7 +18,12 @@ int main()
 	
 	//Display
 	imshow("original image of cameraman", imgOrigin);
+
 	cv::waitKey(0);
 
+	
+
+
+	std::cout << "nothing" << std::endl;
 	return 0;
 }
