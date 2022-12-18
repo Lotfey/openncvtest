@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestAlgos.cpp">
+    <ClCompile Include="colorClassification.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
